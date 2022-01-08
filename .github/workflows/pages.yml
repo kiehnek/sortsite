@@ -19,3 +19,4 @@ jobs:
         with:
           branch: gh_pages
           folder: dist
+          commit-message: "deploy ${{ env.GITHUB_REPOSITORY }}@${{ env.GITHUB_SHA }}"
