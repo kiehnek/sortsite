@@ -24,10 +24,9 @@ const Item: React.FC<Props> = ({
         <div
           className={classNames(
             'inline-flex flex-col items-center py-3 px-1 w-20 text-center rounded cursor-pointer',
-            'border border-nord2 hover:border-nord3',
-            value != null && '',
+            ' hover:border-nord3',
             snapshot.isDraggingOver ? 'bg-nord1' : 'bg-nord0',
-            selected && 'border-nord3 border-2'
+            selected ? 'border-nord3 border-2' : 'border border-nord2'
           )}
           onClick={() => {
             onClick(address);
