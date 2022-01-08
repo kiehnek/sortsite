@@ -30,6 +30,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     setMemory(generateMemory(length));
+    setSelected([]);
   }, [length]);
 
   useEffect(() => {
