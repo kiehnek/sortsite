@@ -50,7 +50,10 @@ const Settings: React.FC<Props> = ({
       />
       <span className="select-text">Hide Values</span>
     </label>
-    <button onClick={() => onReset()} className="px-1 bg-nord1 rounded">
+    <button
+      onClick={() => onReset()}
+      className="px-1 bg-nord1 active:bg-nord3 rounded"
+    >
       Reset
     </button>
   </div>
