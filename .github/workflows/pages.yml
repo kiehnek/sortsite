@@ -14,9 +14,8 @@ jobs:
         run: |
           npm ci
           npm run build
-      - name: Deploy to GH Pages
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
           branch: gh_pages
           folder: dist
-          commit-message: "deploy ${{ env.GITHUB_REPOSITORY }}@${{ env.GITHUB_SHA }}"
