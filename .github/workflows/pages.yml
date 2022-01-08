@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: action/checkout@2
+        uses: actions/checkout@2
 
       - name: Install and Build
         run: |
