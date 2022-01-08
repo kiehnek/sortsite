@@ -5,13 +5,15 @@ interface Props {
   setHideValues: Dispatch<SetStateAction<boolean>>;
   length: number;
   setLength: Dispatch<SetStateAction<number>>;
+  onReset: () => void;
 }
 
 const Settings: React.FC<Props> = ({
   hideValues,
   setHideValues,
   length,
-  setLength
+  setLength,
+  onReset
 }) => (
   <div>
     <div className="mb-1">
@@ -32,7 +34,7 @@ const Settings: React.FC<Props> = ({
       />
       <label htmlFor="length">Length</label>
     </div>
-    <label htmlFor={`hideval`} className="flex cursor-pointer">
+    <label htmlFor={`hideval`} className="flex mb-1 cursor-pointer">
       <div className="inline-block relative mr-2 w-6 h-6 bg-nord1 active:bg-nord3 rounded">
         {hideValues && (
           <div className="absolute w-4 h-4 bg-nord3 rounded-sm translate-x-1/4 translate-y-1/4"></div>
@@ -48,6 +50,9 @@ const Settings: React.FC<Props> = ({
       />
       <span className="select-text">Hide Values</span>
     </label>
+    <button onClick={() => onReset()} className="px-1 bg-nord1 rounded">
+      Reset
+    </button>
   </div>
 );
 

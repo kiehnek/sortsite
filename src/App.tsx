@@ -59,6 +59,12 @@ const App: React.FC = () => {
             <p>Comparisons: {numCompares}</p>
           </div>
           <Settings
+            onReset={() => {
+              setSelected([]);
+              setNumCompares(0);
+              setNumMoves(0);
+              setMemory(generateMemory(length));
+            }}
             hideValues={hideValues}
             setHideValues={setHideValues}
             length={length}
