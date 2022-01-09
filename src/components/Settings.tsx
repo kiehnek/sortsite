@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+import Check from './Check';
 
 interface Props {
   hideValues: boolean;
@@ -17,6 +18,11 @@ const Settings: React.FC<Props> = ({
 }) => (
   <div>
     <div className="mb-1">
+      <Check
+        checked={hideValues}
+        onChange={() => setHideValues(!hideValues)}
+        text="Hide Values"
+      />
       <input
         type="number"
         pattern="[0-9]*"
@@ -34,22 +40,6 @@ const Settings: React.FC<Props> = ({
       />
       <label htmlFor="length">Length</label>
     </div>
-    <label htmlFor={`hideval`} className="flex mb-1 cursor-pointer">
-      <div className="inline-block relative mr-2 w-6 h-6 bg-nord1 active:bg-nord3 rounded">
-        {hideValues && (
-          <div className="absolute w-4 h-4 bg-nord3 rounded-sm translate-x-1/4 translate-y-1/4"></div>
-        )}
-      </div>
-
-      <input
-        className="hidden"
-        type="checkbox"
-        id={`hideval`}
-        checked={hideValues}
-        onChange={() => setHideValues(!hideValues)}
-      />
-      <span className="select-text">Hide Values</span>
-    </label>
     <button
       onClick={() => onReset()}
       className="px-1 bg-nord1 active:bg-nord3 rounded"
