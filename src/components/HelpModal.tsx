@@ -9,13 +9,13 @@ const HelpText: React.FC = () => (
     <p className="mt-2 text-sm">
       Copyright (c) 2022 korki [
       <a
-        href="https://github.com/korki43/sortsite/blob/main/LICENSE"
+        href="https://github.com/kiehnek/sortsite/blob/main/LICENSE"
         className="underline"
       >
         License
       </a>
       ] [
-      <a href="https://github.com/korki43/sortsite" className="underline">
+      <a href="https://github.com/kiehnek/sortsite" className="underline">
         Source
       </a>
       ]
